@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>CSS checkbox & radio</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css" rel="stylesheet">
+	
+	<style>
+	.chkstyle {
+		float: left;
+		width:200px;
+		position: relative;
+	}
+	.chkstyle span{
+		font-size:15px;
+		margin: 20px;
+	}
+	.chkstyle label {
+		font-size:20px;
+		border-radius:5px;
+		cursor: pointer;
+		position: absolute;
+		width: 30px;
+		height: 30px;
+		top: 0;
+		left: 0;
+		background: #fff;
+		border:3px solid #ddd;
+	}
+	.chkstyle label:hover {
+		border:3px solid #b5b5b5;
+	}
+	.chkstyle input[type=checkbox]:checked + label {
+		border:3px solid #7ac9c9;
+	}
+	.chkstyle input[type=checkbox]:checked + label:hover {
+		border:3px solid #7ac9c9;
+		background: #adf2f2;
+	}
+	.chkstyle label:after {
+		opacity: 0.2;
+		content: '';
+		position: absolute;
+		width: 12px;
+		height: 7px;
+		background: transparent;
+		top: 6px;
+		left: 7px;
+		border: 3px solid #333;
+		border-top: none;
+		border-right: none;
+		-webkit-transform: rotate(-45deg);
+		-moz-transform: rotate(-45deg);
+		-o-transform: rotate(-45deg);
+		-ms-transform: rotate(-45deg);
+		transform: rotate(-45deg);
+	}
+	.chkstyle label:hover::after {
+		opacity: 0.5;
+	}
+	.chkstyle input[type=checkbox]:checked + label:after {
+		opacity: 1;
+	}
+	</style>
+	<style>
+	input[type=radio]{
+		display:none;
+	}
+	.radiostyle {
+		float: left;
+		width:200px;
+		position: relative;
+	}
+	.radiostyle span{
+		font-size:15px;
+		margin: 40px;
+	}
+	.radiostyle label {
+		font-size:20px;
+		border-radius:20px;
+		cursor: pointer;
+		position: absolute;
+		width: 30px;
+		height: 30px;
+		top: 0;
+		left: 0;
+		background: #fff;
+		border:5px solid #ddd;
+	}
+	.radiostyle label:hover {
+		border:5px solid #b5b5b5;
+	}
+	.radiostyle input[type=radio]:checked + label {
+		border:5px solid #7ac9c9;
+	}
+	.radiostyle input[type=radio]:checked + label:hover {
+		border:5px solid #7ac9c9;
+		background: #adf2f2;
+	}
+	.radiostyle label:after {
+		opacity: 0.2;
+		content: '';
+		cursor: pointer;
+		position: absolute;
+		width: 4px;
+		height: 4px;
+		background: #333;
+		border-radius:20px;
+		top: 3.5px;
+		left: 3.5px;
+		border: 6px solid #333;
+	}
+	.radiostyle label:hover::after {
+		opacity: 0.5;
+	}
+	.radiostyle input[type=radio]:checked + label:after {
+		opacity: 1;
+	}
+	</style>
+  </head>
+  <body>
+    <div class="container">
+		<div class="row">
+			<h2>Checkbox</h2>
+		</div>
+		<div class="row">
+			<div class="chkstyle">
+				<input type="checkbox" value="1" id="chkbox11" name="chk" />
+				<label for="chkbox11"></label>
+				<span>chreckbox 1</span>
+			</div>
+			<div class="chkstyle">
+				<input type="checkbox" value="1" id="chkbox12" name="chk" />
+				<label for="chkbox12"></label>
+				<span>chreckbox 2</span>
+			</div>
+			<div class="chkstyle">
+				<input type="checkbox" value="1" id="chkbox13" name="chk" />
+				<label for="chkbox13"></label>
+				<span>chreckbox 3</span>
+			</div>
+		</div>
+		<div class="row">
+			<hr>
+		</div>
+		<div class="row">
+			<h2>Radio</h2>
+		</div>
+		<div class="row">
+			<div class="radiostyle">
+				<input type="radio" value="1" id="radio11" name="t1" />
+				<label for="radio11"></label>
+				<span>radio 1</span>
+			</div>
+			<div class="radiostyle">
+				<input type="radio" value="1" id="radio12" name="t1" />
+				<label for="radio12"></label>
+				<span>radio 2</span>
+			</div>
+			<div class="radiostyle">
+				<input type="radio" value="1" id="radio13" name="t1" />
+				<label for="radio13"></label>
+				<span>radio 3</span>
+			</div>
+		</div>
+    </div>
+  </body>
+</html>
